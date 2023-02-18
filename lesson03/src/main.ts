@@ -58,7 +58,7 @@ interface Guitarist {
     active: boolean;
     albums: (string | number)[];
 }
-// We can use interface instead of type. We'll gget into which to use and when later
+// We can use interface instead of type. We'll get into which one to use and when later
 
 let evh: Guitarist = {
     name: "Eddie",
@@ -69,7 +69,7 @@ let evh: Guitarist = {
 
 let jp: Guitarist = {
     name: "Jimmy",
-    active: true, // now that "active" is optional, we can omit it, and still assign js to env no problem, because they are both of Guitarist type
+    active: true, // now that "active" is optional, we can omit it, and still assign jp to evh no problem, because they are both of Guitarist type
     albums: ["I", "II", "IV"],
 };
 evh = jp;

@@ -1,5 +1,5 @@
 // TYPE ALIASES
-type stringOrNumber = string | number; // this is a type alias; it creates a new new for an existing type
+type stringOrNumber = string | number; // this is a type alias; it creates a new name for an existing type
 
 type stringOrNumberArray = (string | number)[]; // now this is a reusable type alias that we can use in the Guitarist type alias for example
 

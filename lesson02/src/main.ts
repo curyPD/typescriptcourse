@@ -13,7 +13,7 @@ const sum = (a: number, b: string) => {
     return a + b;
 };
 
-let postId: string | number; // We could receive id's as string from an API, but use them as numbers in our code
-let isActive: number | boolean; // We can chain more types if want
+let postId: string | number; // We could receive id's as strings from an API, but use them as numbers in our code
+let isActive: number | boolean; // We can chain more types if we want
 
 let re: RegExp = /\w+/g; // RegExp is also a valid type in TS

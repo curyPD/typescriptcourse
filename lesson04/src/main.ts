@@ -48,7 +48,7 @@ type mathFunction = (a: number, b: number) => number;
 // interface mathFunction {
 //     (a: number, b: number): number;
 // }
-// Interfaces seem to be more suitable to be used like classes that can be extended (we'll learn more anout that later)
+// Interfaces seem to be more suitable to be used like classes that can be extended (we'll learn more about that later)
 // Type aliases are more suitable for things like functions and primitive types
 
 let multiply: mathFunction = function (c, d) {
@@ -73,7 +73,7 @@ const sumAll = (a: number = 10, b: number, c: number = 2): number => {
 logMsg(addAll(2, 3, 2));
 logMsg(addAll(2, 3));
 logMsg(sumAll(undefined, 3));
-// ❕ Unlike with optional parameters, we can give a default value not only to the last parameter; Say we give a default value to a, and to call this function so that that defaukt vakue is used, we'd have to pass undefined as the first argument
+// ❕ Unlike with optional parameters, we can give a default value not only to the last parameter; Say we give a default value to a, and to call this function so that that default value is used, we'd have to pass undefined as the first argument
 
 // ❕ Default values can't be used in function signatures (type aliases) like mathFunction
 
@@ -90,7 +90,7 @@ const createError = (errMsg: string): never => {
     throw new Error(errMsg);
 }; // a function returns never type if it explicitly throws
 
-// functions also return a neveer type if there's an infinite loop inside them
+// functions also return a never type if there's an infinite loop inside them
 // if we see that the return value type of a function is infered as never, we should throw, otherwise we might have a problem (like an endless loop)
 const infinite = () => {
     let i: number = 1;

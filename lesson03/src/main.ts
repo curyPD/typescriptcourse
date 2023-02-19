@@ -86,7 +86,7 @@ evh = jp;
 // };
 
 // const greetGuitarist = (guitarist: Guitarist) => {
-//     return `Hello ${guitarist.name?.toUpperCase()}!`; // In TypeScript we can't use methods on objects that could possibly be "undefined" (since we made name to be optional). We'd have to use optional chaining
+//     return `Hello ${guitarist.name?.toUpperCase()}!`; // In TypeScript we can't use methods on objects that could possibly be "undefined" (since we made name optional). We'd have to use optional chaining
 // };
 const greetGuitarist = (guitarist: Guitarist) => {
     if (guitarist.name) {

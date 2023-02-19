@@ -7,7 +7,7 @@ let a: One = "hello";
 let b = a as Two; // less specific
 let c = a as Three; // more specific
 
-let d = <One>"world"; // different syntax for type annotation
+let d = <One>"world"; // different syntax for type assertion
 let e = <string | number>"world";
 // ❕ In tsx the cannot use this <> syntax
 

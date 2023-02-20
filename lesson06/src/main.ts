@@ -88,7 +88,7 @@ class Peeps {
     static count: number = 0; // static methods and fields are only to be used on the class itself, not on class instances
 
     static getCount(): number {
-        return Peeps.count; // not using the this keyword because this points to the object on which method or field is being used, but static fields and methods are mede to be used in classes
+        return Peeps.count; // not using the this keyword because this points to the object on which method or field is being used, but static fields and methods are made to be used in classes
     }
 
     public id: number;

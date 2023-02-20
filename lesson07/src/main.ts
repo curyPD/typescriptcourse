@@ -55,7 +55,7 @@ console.log(todaysTransactions["Dave"]); // undefined // TS gives us no errors b
 ///////////////////////////////////////////////
 
 interface Student {
-    // [key: string]: string | number | number[] | undefined; // We're making it possible to add other properties besides the 3 required ones // Weh nadding an index signature we have to mention all value types that we know will exist on this interface
+    // [key: string]: string | number | number[] | undefined; // We're making it possible to add other properties besides the 3 required ones // When adding an index signature we have to mention all value types that we know will exist on this interface
     name: string;
     GPA: number;
     classes?: number[];
@@ -83,7 +83,7 @@ for (const key in student) {
 
 // What if we didn't know the exact interface of an object?
 // Say we didn't know the type of student
-Object.keys(student).map((key) => {
+Object.keys(student).forEach((key) => {
     console.log(student[key as keyof typeof student]); // this works! 🎉
 }); // we're retrieving the type of student with typeof student
 

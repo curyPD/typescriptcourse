@@ -48,7 +48,7 @@ type mathFunction = (a: number, b: number) => number;
 // interface mathFunction {
 //     (a: number, b: number): number;
 // }
-// Interfaces seem to be more suitable to be used like classes that can be extended (we'll learn more about that later)
+// Interfaces seem to be more suitable to be used for classes that can be extended (we'll learn more about that later)
 // Type aliases are more suitable for things like functions and primitive types
 
 let multiply: mathFunction = function (c, d) {

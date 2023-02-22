@@ -1,6 +1,6 @@
 "use strict";
 // Generics allow us to provide a placeholder (type variable (or type parameter)) when we don't know what type something is going to be
-// const stringExho = (arg: string): string => arg; // let's say we wanted this function to be more generic - not only for strings
+// const stringEcho = (arg: string): string => arg; // let's say we wanted this function to be more generic - not only for strings
 const echo = (arg) => arg; // This is the syntax for Generics // Now this function works for any argument type // T is a type parameter // We could put any name instead of T, but it's the most common type parameter name
 // This feature is useful in utility functions
 const isObj = (arg) => {
@@ -15,10 +15,11 @@ console.log(isObj(null));
 const isTrue = (arg) => {
     if (Array.isArray(arg) && !arg.length) {
         return { arg, is: false };
-    } // we want isTrue to return false if it reecives an empty array or object
+    } // we want isTrue to return false if it recieves an empty array or object
     // if (isObj(arg) && !Object.keys(arg).length) { // TypeScript doesn't know whether or not arg is an object for us to be able to pass it into Object.keys, so we have to use typeof assertion
     if (isObj(arg) && !Object.keys(arg).length) {
         // Now we're basically telling TS that arg is of type T which is an object
+        // Guess #2: arg is of type T, right? Object.keys wants to know if that T type is an object. And apparently by using keyof T, we're telling Object.keys that T is an object. arg is still of type T, its value doesn't change, just like its type, they stay the same
         return { arg, is: false };
     }
     return { arg, is: !!arg };

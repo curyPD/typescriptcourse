@@ -49,8 +49,8 @@ console.log(todaysNet(todaysTransactions));
 
 // todaysTransactions.Pizza = 40 // Index signature in "TransactionObject" only permits reading
 
-console.log(todaysTransactions["Dave"]); // undefined // TS gives us no errors because it has no way of knowing what we're gonna name the keys of the object; it only knows that those are gonna be of type strings and have values of number type
-// So this is not 100% save because there's a possibility that we'll try to access a property that doesn't exist on the object
+console.log(todaysTransactions["Dave"]); // undefined // TS gives us no errors because it has no way of knowing what we're gonna name the keys of the object; it only knows that those are gonna be of type string and have values of number type
+// So this is not 100% safe because there's a possibility that we'll try to access a property that doesn't exist on the object
 
 ///////////////////////////////////////////////
 

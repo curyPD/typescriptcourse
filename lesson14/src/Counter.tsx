@@ -25,6 +25,7 @@ const reducer = (
             return { ...state, count: state.count - 1 };
         case REDUCER_ACTION_TYPE.NEW_INPUT:
             return { ...state, text: action.payload ?? "" };
+        // return { ...state, text: action.payload! };
         case REDUCER_ACTION_TYPE.TOGGLE_THEME:
             return { ...state, isDark: !state.isDark };
         default:
